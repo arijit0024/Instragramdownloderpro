@@ -2,61 +2,423 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Instagram Link Booster</title>
-  <!-- Bootstrap CSS CDN link -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile-Friendly Navbar with Bootstrap</title>
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css" class="stylesheet">
   <style>
-    /* Custom CSS for additional styling */
-    body {
-      background-color: #fafafa;
+    /* Additional styles for customization */
+    .bg{
+      /*background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);*/
     }
-    .form-container {
-      margin-top: 50px;
+    .navbar-brand {
+      font-weight: bold;
+      
     }
+     /* Basic styling for demonstration purposes */
+     .container1 {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+      background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    }
+    .whitetext {
+      color: #fff;
+    
+    }
+    .ins{
+      background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+      height: auto;
+    text-align: center;
+    color: white;
+    }
+    input[type="text"] {
+      width: 80%;
+      padding: 8px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      padding: 12px 20px;
+      background-color: #00be63;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #ffffff;
+    }
+    .custom-box {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+    .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    /* Additional styling for demonstration purposes */
+    .footer {
+      /*background-color: #f8f9fa;*/
+      padding: 20px 0;
+      width: 100%;
+    }
+    .footer-columns {
+      color: #333;
+    }
+    .footer-columns a {
+      display: block;
+      color: #333;
+      margin-bottom: 5px;
+    }
+    .image-container {
+      position: relative;
+      width: 300px; /* Adjust the width as needed */
+      margin: 20px auto;
+    }
+    .instagram-image {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .hidden-div {
+  display: none;
+  visibility: hidden;
+}
+.BtnWhite{
+background-color: linear-gradient(45deg, #bc1888 0%, #cc2366 25%, #dc2743 50%, #e6683c 75%, #f09433 100%);
+
+
+}
+.green-btn {
+  background-color: #01e31f; /* Set the background color */
+  color: white; /* Set the text color */
+  padding: 10px 20px; /* Add padding for better appearance */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Add border-radius for rounded corners */
+  cursor: pointer; /* Add cursor style */
+  text-align: center; /* Center-align the text */
+  text-decoration: none; /* Remove default text decoration */
+  display: inline-block; /* Make the button inline-block */
+}
+
+
+#loadingIcon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dop{
+    filter: drop-shadow(16px 11px 24px #ffffff);
+  }
+  .modal-header{
+    background-color: #d6249f;
+    color:white
+  }
+  p.modal-body {
+   background-color: yellow;
+}
   </style>
 </head>
 <body>
-  <div class="container form-container">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <form id="instagramForm">
-          <div class="form-group">
-            <input type="text" class="form-control" id="instagramLink" placeholder="Enter Instagram Profile Link">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand txt1 " href="#">INSTRAGRAM REEL VIDEO DOWNLOADER</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+
+  
+
+
+
+
+
+
+
+  <div class="container1">
+    <h1 class="whitetext" >Top Instragram Reel Video Downloder</h1>
+    <form id="myForm" action="#" method="post">
+      <input type="text" id="inputField" name="inputField" placeholder="Enter something..." required>
+      <br>
+      <button type="submit" class="green-btn" id="Btn2">
+        <span id="btnText">Submit
+          <i class="fa-solid fa-download"></i>
+        </span>
+        
+      </button>
+
+      
+    </form>
+  </div>
+  
+  <script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form from submitting traditionally
+      const submitBtn = document.getElementById('submitBtn');
+  const btnText = document.getElementById('btnText');
+  const loadingIcon = document.getElementById('loadingIcon');
+  const btn2 = document.getElementById('Btn2');
+
+  // Show loading spinner, hide button text
+  btnText.innerHTML = 'LOADING.....<i class="fas fa-circle-notch fa-spin"></i>';
+  //loadingIcon.style.display = 'inline-block';
+
+
+  
+      // Get the value from the input field
+      const inputField = document.getElementById('inputField');
+      
+      if (inputField) {
+        const inputValue = inputField.value;
+  
+        // Prepare payload
+        const payload = {
+          qValue: inputValue
+        };
+  
+        // Make POST request
+        fetch('https://api.sabkasath.in/extractData', {
+          method: 'POST',
+          body: JSON.stringify(payload),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(response => response.json())
+        .then(data => {
+          //console.log('Response from server:', data);
+          const myImage = document.getElementById("img1");
+          myImage.src = data.extractedData.imageSource;
+          const Btn = document.getElementById("DownBtn")
+          Btn.href = data.extractedData.downloadLink;
+          showDiv()
+          btn2.style.visibility = 'hidden';
+        })
+        .catch(error => {
+          console.error('Error:', error);
+            // Call the function to create the Bootstrap alert
+          createBootstrapAlert();
+        });
+      } else {
+        console.error('Input field not found.');
+          // Call the function to create the Bootstrap alert
+          createBootstrapAlert();
+      }
+    });
+
+
+    function createBootstrapAlert() {
+    // Create a container div
+    const containerDiv = document.createElement('div');
+    containerDiv.classList.add('container', 'mt-4');
+  
+    // Create an alert div
+    const alertDiv = document.createElement('div');
+    alertDiv.classList.add('alert', 'alert-primary');
+    alertDiv.setAttribute('role', 'alert');
+    alertDiv.textContent = 'wror download video ';
+  
+    // Append alert div to container div
+    containerDiv.appendChild(alertDiv);
+  
+    // Append the container div to the body of the document
+    document.body.appendChild(containerDiv);
+  }
+  
+
+
+
+
+
+
+
+  </script>
+
+  <div class="container text-center hidden-div" id="myDiv">
+    <h1 class="ins">Instagram-sized Image with Popup Button</h1>
+    <div class="image-container">
+      <img class="instagram-image" id="img1" src="https://igcdn.xyz/?token=dae2a4886236b15baf918788ea67325fbd189b7e2300f27ae2c80f0588d67710&time=1702532178&file=https%3a%2f%2fscontent.cdninstagram.com%2fv%2ft51.2885-15%2f407862054_1376602159911856_707120984695315475_n.jpg%3fstp%3ddst-jpg_e15%26efg%3deyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMDgweDE5MjAuc2RyIn0%26_nc_ht%3dscontent-lis1-1.cdninstagram.com%26_nc_cat%3d104%26_nc_ohc%3d-kSF9Sk97pMAX_v-kCj%26edm%3dALQROFkBAAAA%26ccb%3d7-5%26ig_cache_key%3dMzI1MjQ5NTgxOTgwMjc0ODcyNw%253D%253D.2-ccb7-5%26oh%3d00_AfBhPrmIToKK09vDeqsETvrvpiF2e507BjFXy4eKq5srnA%26oe%3d657E2171%26_nc_sid%3dfc8dfb" alt="Instagram-sized Image">
+      <br>
+      <button class="btn btn-primary popup-button centered-button green-btn" data-toggle="modal" data-target="#exampleModal">Open Popup</button>
+    </div>
+  </div>
+<script>
+  function showDiv() {
+  const divElement = document.getElementById('myDiv');
+  if (divElement) {
+    divElement.classList.remove('hidden-div');
+  }
+}
+
+</script>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title ins">How To Download Instragram Reel,story,igtv,private Story,video,dp</h2>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod metus eget mi ullamcorper, ac feugiat ex interdum.</p>
+            <p class="card-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            <p class="card-text">Vestibulum ac ante ac massa consectetur viverra sit amet vel enim.</p>
           </div>
-          <button type="button" class="btn btn-primary btn-block" onclick="submitInstagramLink()">Submit</button>
-        </form>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+  
+
+
+   <!-- Popup Modal -->
+   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Popup Modal Title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>This is the content of the popup modal.</p>
+         
+          <!-- Additional content can be added here -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a class="btn btn-primary green-btn" href="https://www.example.com" id="DownBtn">Save changes</a>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Bootstrap JS CDN link (for required JavaScript) -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  <script>
-    // JavaScript for handling form submission
-    function submitInstagramLink() {
-      const instagramLink = document.getElementById('instagramLink').value;
-      const formData = new FormData();
-      formData.append('qvalue', instagramLink);
 
-      fetch('https://api.sabkasath.in/extractData', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => {
-        if (response.ok) {
-          alert('Instagram link submitted successfully!');
-          // Optionally, you can redirect or perform other actions upon successful submission
-        } else {
-          alert('Submission failed. Please try again.');
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('Something went wrong. Please try again.');
-      });
-    }
-  </script>
-</body>
-  </html>
+
+
+    <div class="container mt-4">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="custom-box text-center ins ">
+              <div class="icon">
+                
+                <img width="100" class="dop" height="100" src="/like.png" alt="love-circled"/>
+              </div>
+              <h3>Heading 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod metus eget mi ullamcorper, ac feugiat ex interdum.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="custom-box text-center ins">
+              <div class="icon">
+                
+                <img class="dop" width="100" height="100" src="/player.png" alt="love-circled"/>
+              </div>
+              <h3>Heading 2</h3>
+              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="custom-box text-center ins">
+              <div class="icon">
+                <img class="dop" width="100" height="100" src="/love.png" alt="love-circled"/>
+              </div>
+              <h3>Heading 3</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod metus eget mi ullamcorper, ac feugiat ex interdum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+ <!-- Footer -->
+ <footer class="footer text-center">
+    <div class="container">
+      <div class="row footer-columns">
+        <!-- Column 1 -->
+        <div class="col-md-4">
+          <h5>Column 1</h5>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          <a href="#">Link 4</a>
+          <a href="#">Link 5</a>
+          <a href="#">Link 6</a>
+        </div>
+        <!-- Column 2 -->
+        <div class="col-md-4">
+          <h5>Column 2</h5>
+          <a href="#">Link 7</a>
+          <a href="#">Link 8</a>
+          <a href="#">Link 9</a>
+          <a href="#">Link 10</a>
+          <a href="#">Link 11</a>
+          <a href="#">Link 12</a>
+        </div>
+        <!-- Column 3 -->
+        <div class="col-md-4">
+            <h5>Column 3</h5>
+            <a href="#">Link 13</a>
+            <a href="#">Link 14</a>
+            <a href="#">Link 15</a>
+            <a href="#">Link 16</a>
+            <a href="#">Link 17</a>
+            <a href="#">Link 18</a>
+          </div>
+      </div>
+    </div>
+  </footer>
+
+
+      
+
+<!-- jQuery (Optional - for Bootstrap JS) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Bootstrap JS (Optional - for dropdowns, toggles, etc.) -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
   
+  
+</body>
+</html>
